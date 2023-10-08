@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/sahel-font@v[3.4.0]/dist/font-face.css" rel="stylesheet"
+        type="text/css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="{% static 'lte/all.min.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Tempusdominus Bbootstrap 4 -->
+    <link rel="stylesheet"
+        href="{% static 'plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css' %}">
+    <!-- iCheck -->
+    <link rel="stylesheet" href="{% static 'lte/icheck-bootstrap.min.css' %}">
+    <!-- JQVMap -->
+    <link rel="stylesheet" href="{% static 'lte/jqvmap.min.css' %}">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="{% static 'lte/adminlte.min.css' %}">
+    <!-- overlayScrollbars -->
+    <link rel="stylesheet" href="{% static 'lte/OverlayScrollbars.min.css' %}">
+    <!-- Daterange picker -->
+    <link rel="stylesheet" href="{% static 'lte/daterangepicker.css' %}">
+    <!-- summernote -->
+    <link rel="stylesheet" href="{% static 'lte/summernote-bs4.css' %}">
+    <!-- Google Font: Source Sans Pro -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+    <!-- Bootstrap 4 RTL -->
+    <link rel="stylesheet" href="https://cdn.rtlcss.com/bootstrap/v4.2.1/css/bootstrap.min.css">
+    <!-- Custom style for RTL -->
+    <link rel="stylesheet" href="{% static 'lte/custom.css' %}">
+    <title>{% block title %}{% endblock %}</title>
+    {% block extra_head %}{% endblock %}
+</head>
+
+<body class="hold-transition layout-fixed">
+
+    <div class="wrapper">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">لینک ها</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item d-none d-sm-inline-block">
+                        <a href="{% url 'plan:index' %}" class="nav-link">خانه</a>
+                    </li>
+                    <li class="nav-item d-none d-sm-inline-block">
+                        <a href="" class="nav-link">لیست</a>
+                    </li>
+                    <li class="nav-item d-none d-sm-inline-block">
+                        <a href="" class="nav-link">ورود</a>
+                    </li>
+                </ul>
+            </div>
+            <form class="form-inline" action="" method="get">
+                <div class="input-group input-group-sm">
+                    <input class="form-control form-control-navbar" name="search" type="search" placeholder="جستوجو"
+                        aria-label="Search">
+                    <div class="input-group-append">
+                        <button class="btn btn-navbar" type="submit">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </nav>
+            <!-- Right navbar links -->
+            <ul class="navbar-nav mr-auto-navbav">
+
+            </ul>
+        </nav>
+        <div class="content-wrapper" style="min-height:255.4px;">
+            {% block content %}{% endblock content %}
+        </div>
+        <!-- Control Sidebar -->
+        <aside class="control-sidebar control-sidebar-dark">
+            <!-- Control sidebar content goes here -->
+        </aside>
+        <!-- /.control-sidebar -->
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- jQuery -->
+    <script src="{% static 'lte/jquery.min.js' %}"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="{% static 'lte/jquery-ui.min.js' %}"></script>
+    <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+    <script>
+        $.widget.bridge('uibutton', $.ui.button)
+    </script>
+    <!-- Bootstrap 4 rtl -->
+    <script src="https://cdn.rtlcss.com/bootstrap/v4.2.1/js/bootstrap.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="{% static 'lte/bootstrap.bundle.min.js' %}"></script>
+    <!-- ChartJS -->
+    <script src="{% static 'lte/Chart.min.js' %}"></script>
+    <!-- Sparkline -->
+    <script src="{% static 'lte/sparkline.js' %}"></script>
+    <!-- JQVMap -->
+    <script src="{% static 'lte/jquery.vmap.min.js' %}"></script>
+    <script src="{% static 'lte/jquery.vmap.world.js' %}"></script>
+    <!-- jQuery Knob Chart -->
+    <script src="{% static 'lte/jquery.knob.min.js' %}"></script>
+    <!-- daterangepicker -->
+    <script src="{% static 'lte/moment.min.js' }"></script>
+    <script src="{% static 'lte/daterangepicker.js' %}"></script>
+    <!-- Tempusdominus Bootstrap 4 -->
+    <script src="{% static 'lte/tempusdominus-bootstrap-4.min.js' %}"></script>
+    <!-- Summernote -->
+    <script src="{% static 'lte/summernote-bs4.min.js' %}"></script>
+    <!-- overlayScrollbars -->
+    <script src="{% static 'lte/jquery.overlayScrollbars.min.js' %}"></script>
+    <!-- AdminLTE App -->
+    <script src="{% static 'lte/adminlte.js' %}"></script>
+    <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+    <script src="{% static 'lte/dashboard.js' %}"></script>
+    <!-- AdminLTE for demo purposes -->
+    <script src="{% static 'lte/demo.js' %}"></script>
+    {% block scripts %}
+    {% endblock %}
+</body>
+
+</html>

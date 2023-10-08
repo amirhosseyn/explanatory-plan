@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block title %} ایجاد{% endblock %}
+{% block content %}
+<div class="card card-primary">
+    <div class="card-header">
+        <h3 class="card-title">ثبت طرح</h3>
+    </div>
+    <form class="col-8" action="{% url 'plan:plan_create'  %}" method="post">
+        {% csrf_token %}
+        {{ form |crispy }}
+            <button type="submit" class="btn btn-success">ثبت</button>
+    </form>
+</div>
+{% endblock %}
